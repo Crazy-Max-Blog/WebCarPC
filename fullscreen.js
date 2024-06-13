@@ -27,8 +27,8 @@
 26
 let fullscreen;
 let fsEnter = document.getElementById('fullscr');
-let fsEnterIn = "Войти в полноэкранный режим";
-let fsEnterOut = "Выйти из полноэкранного режима";
+let fsEnterIn = "<>";
+let fsEnterOut = "><";
 fsEnter.innerHTML = fsEnterIn;
 fsEnter.addEventListener('click', function (e) {
     e.preventDefault();
