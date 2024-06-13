@@ -20,7 +20,10 @@
       <div class='menu_p'><img height=10% width=10% src='https://music.yandex.ru/favicon32.png'/></div>
       <div class='menu_p'><img height=10% width=10% src='https://gilmourtractor.com/images/wallmount-camera.png'/></div>
     </div>
-    <button style='position: absolute;top:0;bottom: 97%;left: 0;right: 100%;margin: auto;width:2.5%;height:2.5%' id="fullscr"></button>
+    <div id='notifv' style='position: absolute;top:0;bottom: 0;left: 0;right: 0;margin: auto;width:10%;max-height:20%; background:#1b1c20; border:5px solid transparent; border-radius:10px'>
+      <p>WebCarPC v0.0.0.0.0.0.1</p>
+      <button style='display:block;margin:auto;' onclick="document.getElementById('notifv').style.display='none';document.documentElement.requestFullscreen();">OK</button>
+    </div>
     <script src='fullscreen.js'></script>
   </body>
 </html>
