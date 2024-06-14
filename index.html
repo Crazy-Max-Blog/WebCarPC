@@ -1,4 +1,4 @@
-<!DOCTUPE html>
+<!--<!DOCTYPE html>-->
 <html>
   <head>
     <style>
@@ -18,25 +18,25 @@
   <body style='position: absolute;top:0;bottom: 0;left: 0;right: 0;margin: auto;'>
 
     <!--Maps-->
-    <div id='maps'>
-      <iframe class='el' style='display:none;' src='1.png'></iframe>
+    <div height=90% id='maps' style='display:none;'>
+      <iframe class='el' width=99% height=90% src="https://yandex.ru/map-widget/v1/-/CBucU6V~8B"></iframe>
     </div>
 
     <!--Music-->
-    <div id='music'>
-      <img class='el' style='display:none;' src='1.png'></img>
+    <div height=90% id='music' style='display:none;'>
+      <iframe class='el' frameborder="0" style="border:none;width:100%;height:450px;" width="100%" height="450" src="https://music.yandex.ru/iframe/#album/496406">Слушайте <a href='https://music.yandex.ru/album/496406'>channel ORANGE</a> — <a href='https://music.yandex.ru/artist/452028'>Frank Ocean</a> на Яндекс.Музыке</iframe>
     </div>
 
     <!--Camera-->
-    <div id='cam'>
+    <div height=90% id='camera'>
       <img class='el' src='1.png'></img>
     </div>
 
     <!--Menu-->
     <div style='display:flex;'>
-      <div class='menu_p'><img height=10% width=10% src='icons/maps.svg'/></div>
-      <div class='menu_p'><img height=10% width=10% src='icons/music.svg'/></div>
-      <div class='menu_p'><img height=10% width=10% src='icons/camera.svg'/></div>
+      <div onclick='view("maps")' class='menu_p'><img height=10% width=10% src='icons/maps.svg'/></div>
+      <div onclick='view("music")' class='menu_p'><img height=10% width=10% src='icons/music.svg'/></div>
+      <div onclick='view("camera")' class='menu_p'><img height=10% width=10% src='icons/camera.svg'/></div>
     </div>
 
     <!--Notification-->
@@ -45,7 +45,18 @@
         Activate fullscreen?</p>
       <button style='display:block;margin:auto;' onclick="document.getElementById('notifv').style.display='none';document.documentElement.requestFullscreen();">YES</button>
       <button style='display:block;margin:auto;' onclick="document.getElementById('notifv').style.display='none';">NO</button>
-    </div>
-    <script src='script.js'></script>
+    </div><!-- src='script.js'-->
+    <script>
+      function set(n, b) {
+        document.getElementById(n).style.display=b?'block':'none';
+      }
+      function view(n) {
+        set('maps', 0);
+        set('music', 0);
+        set('camera', 0);
+        
+        set(n, 1);
+      }
+    </script>
   </body>
 </html>
